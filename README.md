@@ -1,35 +1,42 @@
 # 🎬 Movie Review Sentiment Analysis
 
-An interactive end-to-end Machine Learning web application that analyzes movie reviews and classifies their sentiment as **Positive** or **Negative** in real-time. Built with Python and Streamlit, featuring a pre-trained NLP classification model.
+> 🌐 **Live Demo:** [Click here to view live web app](https://your-streamlit-app-link-here.streamlit.app) *(Replace this link after deploying on Streamlit Cloud!)*
+
+An interactive end-to-end Machine Learning & NLP web application that analyzes movie reviews and classifies their sentiment as **Positive** or **Negative** in real-time. Built with Python, Streamlit, and Scikit-Learn, featuring live TMDB API integration and persistent review history.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-* **Real-time Sentiment Classification:** Predicts whether a movie review is positive or negative instantly.
-* **Interactive Dashboard:** Clean, intuitive user interface powered by Streamlit.
-* **Pre-trained Model Integration:** The serialized trained model ships directly with the project—no retraining required on startup.
-* **High Performance:** Achieves high accuracy across training and test splits.
-
----
-
-## 📚 Dataset
-
-This model is trained on the benchmark **[IMDb Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/)** (commonly known as the **IMDb 50K Movie Reviews Dataset**).
-
-* **Total Samples:** 50,000 highly polarized reviews
-* **Class Distribution:** Perfectly balanced (25,000 Positive, 25,000 Negative)
-* **Labels:** Binary (`1` for Positive $\ge 7/10$ rating, `0` for Negative $\le 4/10$ rating)
-* **Preprocessing:** HTML tag stripping, punctuation removal, lowercasing, stopword filtering, and TF-IDF / Bag-of-Words text vectorization.
+* **🔍 Live TMDB Autocomplete Search:** Instant live movie search powered by The Movie Database (TMDB) REST API, featuring release years and poster previews.
+* **💬 Quick Predefined Sample Responses:** One-click sample review buttons (both positive and negative) for fast testing without typing.
+* **⚡ 100% Native Streamlit Architecture:** Built strictly with native Streamlit widgets and event callbacks (`on_click`) for instant responsiveness and zero buffering.
+* **💾 Persistent History Storage:** All analyzed movie reviews are saved to disk (`history.json`) and automatically loaded whenever you open the app.
+* **📊 Sentiment Classification & Confidence:** Evaluates text sentiment and renders confidence progress bars with positive/negative badges.
 
 ---
 
-## 📊 Model Performance
+## 🛠️ Tech Stack
+
+| Component | Technology Used |
+| :--- | :--- |
+| **Frontend UI** | Streamlit, Custom CSS |
+| **Machine Learning / NLP** | Scikit-Learn (TF-IDF Vectorizer + Classifier), Python 3.x |
+| **External API** | TMDB REST API (Movie search & poster artwork) |
+| **Data Processing** | Pandas, NumPy, `urllib`, `json` |
+| **Storage & Persistence** | Persistent JSON Storage (`history.json`) |
+
+---
+
+## 📚 Dataset & Model Metrics
+
+The sentiment classifier is trained on the benchmark **[IMDb 50K Movie Reviews Dataset](https://ai.stanford.edu/~amaas/data/sentiment/)**.
 
 | Metric | Score |
 | :--- | :--- |
-| **Training Accuracy** | 98.59% |
-| **Testing Accuracy** | 90.00% |
+| **Total Samples** | 50,000 balanced reviews (25,000 Positive / 25,000 Negative) |
+| **Training Accuracy** | **98.59%** |
+| **Testing Accuracy** | **90.00%** |
 
 ---
 
@@ -37,7 +44,39 @@ This model is trained on the benchmark **[IMDb Large Movie Review Dataset](https
 
 ```text
 Movie-Review-Sentiment-Analysis/
-├── src/                    # Source code & model training scripts
-├── app.py                  # Main Streamlit application entry point
-├── requirements.txt        # Required Python dependencies
+├── app.py                  # Main Streamlit web application
+├── history.json            # Persistent storage for user review history
+├── requirements.txt        # Python dependencies
+├── src/                    # Source code & ML model pipeline
+│   ├── model.py            # Model training & vectorization definitions
+│   └── predict.py          # Sentiment analyzer inference class
+├── reports/                # Classification reports & metrics
 └── README.md               # Project documentation
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone or navigate to the project directory:**
+   ```bash
+   cd Movie-Review-Sentiment-Analysis
+   ```
+
+2. **Install required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Streamlit application:**
+   ```bash
+   streamlit run app.py
+   ```
+
+4. Open your browser at `http://localhost:8501` to use the app live!
+
+---
+
+## 📄 License & Attribution
+
+Movie data and poster images provided by [TMDB](https://www.themoviedb.org/). This product uses the TMDB API but is not endorsed or certified by TMDB.
