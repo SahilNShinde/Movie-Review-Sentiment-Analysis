@@ -1,6 +1,6 @@
 # 🎬 Movie Review Sentiment Analysis
 
-> 🌐 **Live Demo:** [Click here to view live web app](Movies Review Sentiment Analysis)*((https://movie-review-sentiment-analysis-hnbcljs5nzsvqgbanpumkp.streamlit.app/))*
+> 🌐 **Live Demo:** [Click here to view live web app]*((https://movie-review-sentiment-analysis-hnbcljs5nzsvqgbanpumkp.streamlit.app/))*
 
 An interactive end-to-end Machine Learning & NLP web application that analyzes movie reviews and classifies their sentiment as **Positive** or **Negative** in real-time. Built with Python, Streamlit, and Scikit-Learn, featuring live TMDB API integration and persistent review history.
 
