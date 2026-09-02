@@ -56,26 +56,7 @@ Movie-Review-Sentiment-Analysis/
 
 ---
 
-## ⚙️ Installation & Setup
 
-1. **Clone or navigate to the project directory:**
-   ```bash
-   cd Movie-Review-Sentiment-Analysis
-   ```
-
-2. **Install required dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the Streamlit application:**
-   ```bash
-   streamlit run app.py
-   ```
-
-4. Open your browser at `http://localhost:8501` to use the app live!
-
----
 
 ## 📄 License & Attribution
 
